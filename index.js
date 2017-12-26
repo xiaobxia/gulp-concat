@@ -95,7 +95,7 @@ module.exports = function(file, opt) {
     if (concat.sourceMapping) {
       joinedFile.sourceMap = JSON.parse(concat.sourceMap);
     }
-    //TODO 把流添加进来给下一个插件使用
+    //TODO 确保文件进入下一个 gulp 插件
     this.push(joinedFile);
     cb();
   }
